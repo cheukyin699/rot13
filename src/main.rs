@@ -2,8 +2,8 @@ use std::io::{self, Read};
 
 fn rot13_c(c: char) -> char {
     match c {
-        'A'...'M' | 'a'...'m' => ((c as u8) + 13) as char,
-        'N'...'Z' | 'n'...'z' => ((c as u8) - 13) as char,
+        'A'..='M' | 'a'..='m' => ((c as u8) + 13) as char,
+        'N'..='Z' | 'n'..='z' => ((c as u8) - 13) as char,
         _ => c,
     }
 }
